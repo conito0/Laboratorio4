@@ -24,25 +24,30 @@ public class InstrumentoController {
     }
 
     @GetMapping("/{id}")
+    @CrossOrigin
     public Instrumento getById(@PathVariable("id") Long id) {
         return this.instrumentoService.findById(id);
     }
+    @CrossOrigin
     @GetMapping
     public List<Instrumento> getAll() {
         return this.instrumentoService.findAll();
     }
 
     @PostMapping
+    @CrossOrigin
     public Instrumento post(@RequestBody Instrumento instrumento) {
         return this.instrumentoService.save(instrumento);
     }
 
     @PutMapping("/{id}")
+    @CrossOrigin
     public Instrumento put(@PathVariable("id") Long id, @RequestBody Instrumento instrumento) {
         return this.instrumentoService.update(id, instrumento);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
+    @CrossOrigin
     public void delete(@PathVariable("id") Long id){
          this.instrumentoService.delete(id);
     }

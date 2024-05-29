@@ -19,6 +19,27 @@ public class Instrumento {
 
     @Column
     public String nombre;
+    @Column
+    public String instrumento;
+    @Column
+    public String marca;
+    @Column
+    public String modelo;
+
+    @Column(length = 1000)
+    public String imagen;
+    @Column
+    public String precio;
+    @Column
+    public String costoEnvio;
+    @Column
+    public String cantidadVendida;
+    @Column
+    public String descripcion;
+
+    @ManyToOne(fetch=FetchType.EAGER)
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
 
 
 
