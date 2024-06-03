@@ -32,9 +32,11 @@ public class Instrumento {
     public String precio;
     @Column
     public String costoEnvio;
+
     @Column
     public String cantidadVendida;
-    @Column
+
+    @Column(length = 1000)
     public String descripcion;
 
     @ManyToOne(fetch=FetchType.EAGER)
