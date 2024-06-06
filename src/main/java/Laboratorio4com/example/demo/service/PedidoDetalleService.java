@@ -40,4 +40,8 @@ public class PedidoDetalleService {
         this.pedidoDetalleRepository.deleteById(id);
     }
 
+    public List<Object[]> getStats() {
+        return this.pedidoDetalleRepository.countPedidosPorInstrumento();
+    }
+
 }

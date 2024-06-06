@@ -51,6 +51,11 @@ public class PedidoDetalleController {
         this.pedidoDetalleService.delete(id);
     }
 
+    @GetMapping("/stats")
+    @CrossOrigin
+    public List<Object[]> getStats() {
+        return this.pedidoDetalleService.getStats();
+    }
 
 }
 
